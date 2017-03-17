@@ -1,0 +1,77 @@
+<!-- <button ng-click="btnNew()" class="button">creates new note</button>
+
+<div>
+    <div id="controls">
+      <img id="btnNew" src="images/newnote.png"/>
+    </div>
+    
+    <ul id="notes"/>  
+</div> -->
+
+
+<!-- 
+
+    <div ng-repeat="input in inputs track by $index">
+      <input type="textarea">
+      
+    </div>
+    <button ng-click="moreInputs();">+ input</button> -->
+
+    
+
+ 
+<body ng-controller="stickyCtrl"> 
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item " href="#">Home</a>
+                <a class="blog-nav-item active" href="addPost.html">Add Post</a>
+ 
+            </nav>
+        </div>
+    </div>
+ 
+    <div class="container">
+ 
+        <form class="form-horizontal" ng-submit="AddPost()">
+            <fieldset>
+ 
+                <!-- Form Name -->
+                <legend>Create Post</legend>
+ 
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtTitle">Title</label>
+                    <div class="col-md-4">
+                        <input id="txtTitle" name="txtTitle" type="text" ng-model="article.title" placeholder="placeholder" class="form-control input-md">
+ 
+                    </div>
+                </div>
+ 
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtPost">Post</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="txtPost" name="txtPost" ng-model="article.post"></textarea>
+                    </div>
+                </div>
+ 
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                    <div class="col-md-4">
+                       <!--  <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Publish" /> -->
+                       <input id="singlebutton" ng-disabled="!article.title || !article.post" name="singlebutton" class="btn btn-primary" type="submit" value="Publish" />
+                    </div>
+                </div>
+ 
+            </fieldset>
+        </form>
+ 
+ 
+    </div>
+
+ 
+ 
+
+

@@ -1,0 +1,57 @@
+<div ng-controller="myCtrl">
+   <h1>{{hex}}</h1>
+<!--    <div>
+   <textarea placeholder="enter text here" ng-model="noteText"></textarea>
+    <button ng-click="add()" class="button">Add Note</button>
+    </div> -->
+
+    <button ng-click="redirect()" class="button">third page</button>
+
+
+    <form ng-submit="addNote()">
+            <input class='form-control' placeholder="enter text" ng-model="newNote" autofocus>
+    </form>
+
+
+<!-- <div ng-repeat="input in inputs track by $index"> -->
+      <!-- <input type="textarea"> -->
+    <div ng-repeat="note in notes" >
+      <div ng-if='note !== editedNote'>
+          <input type="checkbox" ng-model="note.completed" ng-change="notes.$save(note)">
+            <label ng-dblclick="editNote(note)" ng-if='note.completed'>{{note.title}}</label>
+            <label ng-dblclick="editNote(note)" ng-if='!note.completed'>{{note.title}}</label>
+            <button class='btn btn-primary' ng-click="removeNote(note)">remove</button>
+      </div>
+          <form ng-submit="doneEditing(note)" ng-if='note == editedNote'>
+            <input class="edit" ng-model="note.title">
+          </form>
+    </div>
+
+<!-- </div> -->
+        
+</div>
+
+
+
+<!--     <div id="main">
+  <nav class="{{active}}" ng-click="$event.preventDefault()"> 
+
+    <a href="#" class="home" ng-click="active='home'">Home</a>
+    <a href="#" class="projects" ng-click="active='projects'">Projects</a>
+    <a href="#" class="services" ng-click="active='services'">Services</a>
+    <a href="#" class="contact" ng-click="active='contact'">Contact</a>
+  </nav>
+
+
+  <p ng-hide="active">Please click a menu item</p>
+  <p ng-show="active">You chose <b>{{active}}</b></p>
+</div> -->
+
+
+
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        <h4 class="list-group-item-heading">Title Heading</h4>
+        <p class="list-group-item-text">Blog post content </p>
+    </a>
+</div>

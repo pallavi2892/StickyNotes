@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+	<script>
+  		// Initialize Firebase
+  		var config = {
+    		apiKey: "AIzaSyAQPQbj_ht3-1ARBXZMfN_hxtZyLQH-A6s",
+    		authDomain: "my-notes-6a6f1.firebaseapp.com",
+    		databaseURL: "https://my-notes-6a6f1.firebaseio.com",
+    		storageBucket: "my-notes-6a6f1.appspot.com",
+    		messagingSenderId: "663198687977"
+  		};
+  		firebase.initializeApp(config);
+	</script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+    <script src="js/angular.js" type="text/javascript" language="javascript"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/homePage.js"></script>
+    <!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+
+
+	 <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.3/angular.js" data-semver="1.4.3"></script>
+
+</head>
+
+<body ng-app="mainApp">
+<div ng-view></div>
+
+
+</body>
+</html>
+
